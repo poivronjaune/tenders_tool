@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tenders_tool"
+version = "0.0.3"
+
+[project.scripts]
+snakey = "tenders_tool.__main__:main"
