@@ -5,6 +5,26 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tenders_tool"
 version = "0.0.3"
+description = "Tools to work with Tenders Procurement Data - from multiple sources (SEAO Only for now)"
+readme = "README.md"
+authors = [{name = "PoivronJaune", email="poivronjaune@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10"
+]
+keywords = ["seao", "quebec", "appels d'offres", "gouvernement", "procurement"]
+dependencies = [
+    "pandas",
+    "jsonschema",
+    "requests"
+]
+requires-python = ">3.10"
+
+[project.optional-dependencies]
+build = ["build","twine"]
+dev = ["pytest"]
 
 [project.scripts]
 snakey = "tenders_tool.__main__:main"
