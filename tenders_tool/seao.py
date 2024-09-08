@@ -7,7 +7,6 @@ import copy
 import requests
 from datetime import datetime
 
-
 class GithubSEAO:
     """Utility class to retrieve github info and links"""
 
@@ -58,11 +57,6 @@ class GithubSEAO:
 
         result_str = url + size + json_type + item_type + item_keys
         return result_str
-
-    @property
-    def data(self) -> list:
-        return self.json_data
-        return url
 
     @property
     def api_content(self) -> str:
