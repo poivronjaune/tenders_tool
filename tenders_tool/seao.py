@@ -53,7 +53,11 @@ class GithubSEAO:
         size = f"Dataset size: {len(self.json_data)} \n"
         json_type = f"Type for data: {type(self.json_data)} \n"
         item_type = f"Type for item: {type(self.json_data[0])} \n"
-        item_keys = f"item root keys: {self.json_data[0].keys()} \n"
+        
+        keys_set = set()
+        for row in self.json_data:
+            keys_set.update(row.keys())
+        item_keys = f"item root keys: {keys_set} \n"
 
         result_str = url + size + json_type + item_type + item_keys
         return result_str
