@@ -50,10 +50,10 @@ class GithubSEAO:
     def __str__(self) -> str:
         # url = f'{self.owner} -> {self.repo} -> {self.branch}'
         url = f"Data source: https://github.com/{self.owner}/{self.repo}/tree/{self.branch} \n"
-        size = f"Dataset size: {len(self.data)} \n"
-        json_type = f"Type for data: {type(self.data)} \n"
-        item_type = f"Type for item: {type(self.data[0])} \n"
-        item_keys = f"item root keys: {self.data[0].keys()} \n"
+        size = f"Dataset size: {len(self.json_data)} \n"
+        json_type = f"Type for data: {type(self.json_data)} \n"
+        item_type = f"Type for item: {type(self.json_data[0])} \n"
+        item_keys = f"item root keys: {self.json_data[0].keys()} \n"
 
         result_str = url + size + json_type + item_type + item_keys
         return result_str
