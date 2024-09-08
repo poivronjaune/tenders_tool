@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tenders_tool"
-version = "0.0.3"
+version = "0.0.4"
 description = "Tools to work with Tenders Procurement Data - from multiple sources (SEAO Only for now)"
 readme = "README.md"
 authors = [{name = "PoivronJaune", email="poivronjaune@gmail.com"}]
